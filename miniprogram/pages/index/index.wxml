@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view>
+  <van-tabs swipeable active="a" class="tabs">
+    <van-tab title="最新" name="a"></van-tab>
+    <van-tab title="推荐" name="b"></van-tab>
+    <van-tab title="热门" name="c"></van-tab>
+  </van-tabs>
+  <view wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" 
+    data-idx="{{idx}}" wx:key="key" style="margin-bottom:10px">
+  <van-cell-group >
+    <van-cell border="{{ false }}">
+      <view slot="title"> 
+        <view class="van-cell-text">
+          <span class="avatar" slot="left-icon">
+          <image src="{{item.feed_source_img}}"></image>
+          </span> \r\t\r\t{{item.feed_source_name}}
+        </view>
+      </view>
+      <view class="van-cell-text">{{item.module}}</view>
+    </van-cell>
+
+    <van-cell class="title" border="{{ false }}">{{item.question}}</van-cell>
+    <van-cell class="content" border="{{ false }}" style="padding-top:-10px">{{item.answer_ctnt}}</van-cell>
+
+    <van-cell border="{{ false }}">
+      <view slot="title"> 
+        <view class="van-cell-text">
+          <span class="avatar" slot="left-icon">
+          <image src="{{item.goodjobbefore}}" style="height:15px; width:15px"></image>
+          \r\t{{item.good_num}}\r\t\r\t
+          <image src="{{item.comment}}" style="height:15px; width:15px"></image>
+          \r\t{{item.answer_id}}
+          </span> 
+
+        </view>
+      </view>
+    </van-cell>
+  </van-cell-group>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+/**index.wxss**/
+@import '/miniprogram_npm/@vant/weapp/common/index.wxss';
+.tabs .van-tabs__line {
+  background-color: #0068C4;
+}
+.avatar image{
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 45rpx;
+  top: 10rpx;
+  vertical-align: middle;
+}
+.van-cell-text{
+  color: #a0acac;
+  font-size: 24rpx;
+}
+.title .van-cell__value{
+  margin-top:-12px;
+  font-size: 30rpx;
+  font-weight: 600px;
+  line-height: 40rpx;
+  text-align: left;
+  color:#222222;
+}
+.content .van-cell__value{
+  margin-top:-12px;
+  margin-bottom: -12px;
+  font-size: 28rpx;
+  font-weight: 600px;
+  line-height: 40rpx;
+  text-align: left;
+  color: #666666;
+  /* 超出三行用省略号表示 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
