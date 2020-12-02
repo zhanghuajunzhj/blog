@@ -58,7 +58,8 @@ Page({
         sort_type: 200
       },
       header: {
-        "content-type": "application/json; charset=utf-8" // 默认值
+        "content-type": "application/json; charset=utf-8", // 默认值
+        "Origin": "http://api.juejin.cn"
       },
       success (res) {
         console.log(res.data)
